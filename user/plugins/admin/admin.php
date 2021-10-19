@@ -829,14 +829,6 @@ class AdminPlugin extends Plugin
         /** @var Twig $twig */
         $twig = $this->grav['twig'];
 
-        // Dashboard
-        $twig->plugins_hooked_nav['PLUGIN_ADMIN.DASHBOARD'] = [
-            'route' => 'dashboard',
-            'icon' => 'fa-th',
-            'authorize' => ['admin.login', 'admin.super'],
-            'priority' => 10
-        ];
-
         // Configuration
         $twig->plugins_hooked_nav['PLUGIN_ADMIN.CONFIGURATION'] = [
             'route' => 'config',
