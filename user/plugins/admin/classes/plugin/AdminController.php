@@ -373,7 +373,7 @@ class AdminController extends AdminBaseController
      */
     protected function taskGetNotifications()
     {
-        if (!$this->authorizeTask('dashboard', ['admin.login', 'admin.super'])) {
+        if (!$this->authorizeTask('pages', ['admin.login', 'admin.super'])) {
             $this->admin->json_response = [
                 'status'  => 'error',
                 'message' => $this->admin::translate('PLUGIN_ADMIN.INSUFFICIENT_PERMISSIONS_FOR_TASK')
@@ -466,7 +466,7 @@ class AdminController extends AdminBaseController
      */
     protected function taskGetNewsFeed()
     {
-        if (!$this->authorizeTask('dashboard', ['admin.login', 'admin.super'])) {
+        if (!$this->authorizeTask('pages', ['admin.login', 'admin.super'])) {
             $this->admin->json_response = [
                 'status'  => 'error',
                 'message' => $this->admin::translate('PLUGIN_ADMIN.INSUFFICIENT_PERMISSIONS_FOR_TASK')
@@ -857,7 +857,7 @@ class AdminController extends AdminBaseController
             return false;
         }
 
-        if (!$this->authorizeTask('dashboard', ['admin.plugins', 'admin.themes', 'admin.super'])) {
+        if (!$this->authorizeTask('pages', ['admin.plugins', 'admin.themes', 'admin.super'])) {
             $this->admin->json_response = [
                 'status'  => 'error',
                 'message' => $this->admin::translate('PLUGIN_ADMIN.INSUFFICIENT_PERMISSIONS_FOR_TASK')
