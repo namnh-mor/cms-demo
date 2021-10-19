@@ -1051,7 +1051,7 @@ class AdminPlugin extends Plugin
         $path = trim(substr($this->uri->route(), strlen($this->base)), '/');
 
         if (empty($this->template)) {
-            $this->template = 'pages';
+            $this->template = 'dashboard';
         }
 
         // Can't access path directly...
