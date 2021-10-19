@@ -2,8 +2,6 @@
 
 {% set title = "PLUGIN_ADMIN.DASHBOARD"|t %}
 
-{% set clear_cache_url = base_url_relative ~ '/cache.json/task' ~ config.system.param_sep ~ 'clearCache'|e('html_attr') %}
-
 {% block titlebar %}
     <div class="button-bar">
         {% if authorize(['admin.maintenance', 'admin.super', 'admin.cache']) %}
