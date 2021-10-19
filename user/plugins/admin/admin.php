@@ -848,7 +848,7 @@ class AdminPlugin extends Plugin
         $twig->plugins_hooked_nav['PLUGIN_ADMIN.PAGES'] = [
             'route' => 'pages',
             'icon' => 'fa-file-text-o',
-            'authorize' => ['admin.pages', 'admin.super'],
+            'authorize' => ['admin.login', 'admin.super'],
             'badge' => $count,
             'priority' => 5
         ];
