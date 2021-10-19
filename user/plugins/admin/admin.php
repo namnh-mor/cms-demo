@@ -349,14 +349,6 @@ class AdminPlugin extends Plugin
             'name' => $lang->translate('PLUGIN_ADMIN.VIEWS_STATISTICS'),
             'template' => 'dashboard-statistics',
         ];
-        $this->grav['twig']->plugins_hooked_dashboard_widgets_top[] = [
-            'name' => $lang->translate('PLUGIN_ADMIN.NOTIFICATIONS'),
-            'template' => 'dashboard-notifications',
-        ];
-        $this->grav['twig']->plugins_hooked_dashboard_widgets_top[] = [
-            'name' => $lang->translate('PLUGIN_ADMIN.NEWS_FEED'),
-            'template' => 'dashboard-feed',
-        ];
         $this->grav['twig']->plugins_hooked_dashboard_widgets_main[] = [
             'name' => $lang->translate('PLUGIN_ADMIN.LATEST_PAGE_UPDATES'),
             'template' => 'dashboard-pages',
