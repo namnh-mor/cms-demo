@@ -853,33 +853,6 @@ class AdminPlugin extends Plugin
             'priority' => 5
         ];
 
-        // Plugins
-        $count = new Container(['updates' => 0, 'count' => function () { return count($this->admin->plugins()); }]);
-        $twig->plugins_hooked_nav['PLUGIN_ADMIN.PLUGINS'] = [
-            'route' => 'plugins',
-            'icon' => 'fa-plug',
-            'authorize' => ['admin.plugins', 'admin.super'],
-            'badge' => $count,
-            'priority' => -8
-        ];
-
-        // Themes
-        $count = new Container(['updates' => 0, 'count' => function () { return count($this->admin->themes()); }]);
-        $twig->plugins_hooked_nav['PLUGIN_ADMIN.THEMES'] = [
-            'route' => 'themes',
-            'icon' => 'fa-tint',
-            'authorize' => ['admin.themes', 'admin.super'],
-            'badge' => $count,
-            'priority' => -9
-        ];
-
-        // Tools
-        $twig->plugins_hooked_nav['PLUGIN_ADMIN.TOOLS'] = [
-            'route' => 'tools',
-            'icon' => 'fa-briefcase',
-            'authorize' => $this->admin::toolsPermissions(),
-            'priority' => -10
-        ];
     }
 
     /**
