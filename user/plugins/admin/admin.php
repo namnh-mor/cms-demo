@@ -848,7 +848,7 @@ class AdminPlugin extends Plugin
         $twig->plugins_hooked_nav['PLUGIN_ADMIN.PAGES'] = [
             'route' => 'pages',
             'icon' => 'fa-file-text-o',
-            'authorize' => ['admin.login', 'admin.super'],
+            'authorize' => ['admin.pages', 'admin.super'],
             'badge' => $count,
             'priority' => 5
         ];
@@ -1051,7 +1051,7 @@ class AdminPlugin extends Plugin
         $path = trim(substr($this->uri->route(), strlen($this->base)), '/');
 
         if (empty($this->template)) {
-            $this->template = 'dashboard';
+            $this->template = 'pages';
         }
 
         // Can't access path directly...
