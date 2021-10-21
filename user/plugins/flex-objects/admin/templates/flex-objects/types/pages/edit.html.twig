@@ -160,24 +160,6 @@
             {% endif %}
         </div>
     {% endif %}
-
-    {% if user.authorize('admin.super') %}
-    <form id="admin-mode-toggle">
-        {% set normalText = 'PLUGIN_ADMIN.NORMAL'|tu %}
-        {% set expertText = 'PLUGIN_ADMIN.EXPERT'|tu %}
-        {% set maxLen = max([normalText|length, expertText|length]) %}
-        {% set normalText = macro.spanToggle(normalText, maxLen) %}
-        {% set expertText = macro.spanToggle(expertText, maxLen) %}
-
-        <div class="switch-toggle switch-grav">
-            <input type="radio" value="normal" data-leave-url="{{ route.withGravParam('mode', 'normal').toString(true) }}" id="normal" name="mode-switch" class="highlight" {% if expert == '0' %} checked="checked"{% endif %}>
-            <label for="normal">{{ normalText }}</label>
-            <input type="radio" value="expert" data-leave-url="{{ route.withGravParam('mode', 'expert').toString(true) }}" id="expert" name="mode-switch" class="highlight" {% if expert == '1' %} checked="checked"{% endif %}>
-            <label for="expert">{{ expertText }}</label>
-            <a></a>
-        </div>
-    </form>
-    {% endif %}
 {% endblock topbar %}
 
 {% block edit %}
