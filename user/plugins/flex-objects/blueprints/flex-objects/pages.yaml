@@ -12,11 +12,11 @@ form:
       type: hidden
       value: ''
 
-    tabs:
-      fields:
-        security:
-          type: tab
-          title: PLUGIN_ADMIN.SECURITY
-          import@:
-            type: partials/security
-            context: blueprints://pages
+    # tabs:
+    #   fields:
+    #     security:
+    #       type: tab
+    #       title: PLUGIN_ADMIN.SECURITY
+    #       import@:
+    #         type: partials/security
+    #         context: blueprints://pages
