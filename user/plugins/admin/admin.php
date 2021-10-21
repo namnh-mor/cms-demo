@@ -829,20 +829,6 @@ class AdminPlugin extends Plugin
             'priority' => 10
         ];
 
-        // Configuration
-        $twig->plugins_hooked_nav['PLUGIN_ADMIN.CONFIGURATION'] = [
-            'route' => 'config',
-            'icon' => 'fa-wrench',
-            'authorize' => [
-                'admin.configuration.system',
-                'admin.configuration.site',
-                'admin.configuration.media',
-                'admin.configuration.security',
-                'admin.configuration.info',
-                'admin.super'],
-            'priority' => 9
-        ];
-
         // Pages
         $count = new Container(['count' => function () { return $this->admin->pagesCount(); }]);
         $twig->plugins_hooked_nav['PLUGIN_ADMIN.PAGES'] = [
