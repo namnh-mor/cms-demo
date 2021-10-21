@@ -1,3 +1,5 @@
 {%- set authorize = directory.config('admin.views.configure.authorize') ?? directory.config('admin.configure.authorize') ?? 'admin.super' %}
+
+{%- if configure_url and user.authorize(authorize) %}
 <p />
 {% endif %}
